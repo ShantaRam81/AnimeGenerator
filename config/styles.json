@@ -8,9 +8,17 @@
       "positive": "{prompt}, anime artwork, anime style, key visual, vibrant, studio anime, highly detailed",
       "negative": "photo, deformed, black and white, realism, disfigured, low contrast"
     },
+    "AnimeRetro": {
+      "positive": "{prompt}, 90s anime style, vhs, cel-shading, hand-drawn, soft gradients, nostalgic, vintage animation",
+      "negative": "modern anime, 3d, digital art, photorealistic"
+    },
     "Photorealistic": {
       "positive": "{prompt}, photorealistic, highly detailed, lifelike, precise, accurate",
       "negative": "abstract, low detail, unrealistic, inaccurate"
+    },
+    "Photographic": {
+      "positive": "{prompt}, cinematic photo, 35mm photograph, film, bokeh, professional, 4k, highly detailed",
+      "negative": "drawing, painting, crayon, sketch, graphite, impressionist, noisy, blurry, soft, deformed, ugly"
     },
     "Digital art": {
       "positive": "{prompt}, concept art, digital artwork, illustrative, painterly, matte painting, highly detailed",
@@ -31,6 +39,42 @@
     "Neonpunk": {
       "positive": "{prompt}, neonpunk style, cyberpunk, vaporwave, neon, vibes, vibrant, stunningly beautiful, crisp, detailed, sleek, ultramodern",
       "negative": "painting, drawing, illustration, glitch, deformed, mutated, cross-eyed, ugly, disfigured"
+    },
+    "3d-model": {
+      "positive": "{prompt}, professional 3d model, octane render, highly detailed, volumetric, dramatic lighting",
+      "negative": "ugly, deformed, noisy, low poly, blurry, painting"
+    },
+    "Cinematic": {
+      "positive": "{prompt}, cinematic film still, shallow depth of field, vignette, highly detailed, high budget Hollywood movie, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy",
+      "negative": "anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured"
+    },
+    "Pixel art": {
+      "positive": "{prompt}, pixel-art, low-res, blocky, pixel art style, 8-bit graphics",
+      "negative": "sloppy, messy, blurry, noisy, highly detailed, ultra textured, photo, realistic"
+    },
+    "Texture": {
+      "positive": "{prompt}, texture, top down close-up",
+      "negative": "ugly, deformed, noisy, blurry"
+    },
+    "Lowpoly": {
+      "positive": "{prompt}, low-poly style, low-poly game art, polygon mesh, jagged, blocky, wireframe edges, centered composition",
+      "negative": "noisy, sloppy, messy, grainy, highly detailed, ultra textured, photo"
+    },
+    "Origami": {
+      "positive": "{prompt}, origami style, paper art, pleated paper, folded, origami art, pleats, cut and fold, centered composition",
+      "negative": "noisy, sloppy, messy, grainy, highly detailed, ultra textured, photo"
+    },
+    "Line art": {
+      "positive": "{prompt}, line art drawing, professional, sleek, modern, minimalist, graphic, line art, vector graphics",
+      "negative": "anime, photorealistic, 35mm film, deformed, glitch, blurry, noisy, off-center, deformed, cross-eyed, closed eyes, bad anatomy, ugly, disfigured, mutated, realism, realistic, impressionism, expressionism, oil, acrylic"
+    },
+    "Craft clay": {
+      "positive": "{prompt}, play-doh style, sculpture, clay art, centered composition, Claymation",
+      "negative": "sloppy, messy, grainy, highly detailed, ultra textured, photo"
+    },
+    "Isometric": {
+      "positive": "{prompt}, isometric style, vibrant, beautiful, crisp, detailed, ultra detailed, intricate",
+      "negative": "deformed, mutated, ugly, disfigured, blur, blurry, noise, noisy, realistic, photographic"
     }
   },
   "Famous Artists": {
