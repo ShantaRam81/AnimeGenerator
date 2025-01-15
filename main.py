@@ -1,19 +1,48 @@
 import torch
 from diffusers import DiffusionPipeline
 import random
+import json
 
+def load_styles(filename):
+    with open(filename, 'r', encoding='utf-8') as file:
+        return json.load(file)
+
+# Загружаем стили
+styles_data = load_styles('styles.json')
+
+styles = {
+    style_name: style_info 
+    for category in styles_data.values() 
+    for style_name, style_info in category.items()
+}
+
+# Сюда вписывать промт
+base_prompt = "1boy, male focus, gojou satoru, jujutsu kaisen, beach t-shirt, beach shorts, white hair, beach background"
+
+selected_style = "Fashion"
+
+if selected_style in styles:
+    style_data = styles[selected_style]
+    formatted_prompt = style_data['positive'].replace('{prompt}', base_prompt)
+    formatted_negative = style_data['negative'] + ", nsfw, lowres, (bad), text, error, fewer, extra, missing, worst quality, jpeg artifacts, low quality, watermark, unfinished, displeasing, oldest, early, chromatic aberration, signature, extra digits, artistic error, username, scan, [abstract]"
+else:
+    formatted_prompt = base_prompt
+    formatted_negative = "nsfw, lowres, (bad), text, error, fewer, extra, missing, worst quality, jpeg artifacts, low quality, watermark, unfinished, displeasing, oldest, early, chromatic aberration, signature, extra digits, artistic error, username, scan, [abstract]"
+
+random_seed = random.randint(0, 2147483647)
+print(f"Используется seed: {random_seed}")
 
 metadata = {
-    "prompt": "Hyperrealistic art 1boy, Madara Uchiha \(Naruto\), Naruto, black dress, outdoors, close up face, masterpiece, best quality, very aesthetic, absurdres . Extremely high-resolution details, photographic, realism pushed to extreme, fine texture, incredibly lifelike",
-    "negative_prompt": "nsfw, lowres, (bad), text, error, fewer, extra, missing, worst quality, jpeg artifacts, low quality, watermark, unfinished, displeasing, oldest, early, chromatic aberration, signature, extra digits, artistic error, username, scan, [abstract]",
+    "prompt": formatted_prompt,
+    "negative_prompt": formatted_negative,
     "resolution": "896 x 1152",
     "guidance_scale": 7,
-    "num_inference_steps": 28,
-    "seed": 833127558,
+    "num_inference_steps": 50,
+    "seed": random_seed,
     "sampler": "Euler a",
-    "sdxl_style": "Hyperrealism",
+    "sdxl_style": selected_style,
     "add_quality_tags": True,
-    "quality_tags": "Standard v3.1",
+    "quality_tags": "Heavily detailed v3.1",
     "use_upscaler": None,
     "Model": {
         "Model": "Stable Diffusion Anime Style",
@@ -41,9 +70,7 @@ if "sdxl_style" in metadata:
 
 negative_prompt = metadata["negative_prompt"]
 
-random_seed = random.randint(0, 2147483647)
-metadata["seed"] = random_seed
-print(f"Используется seed: {random_seed}")
+
 
 
 generator = torch.manual_seed(random_seed)  

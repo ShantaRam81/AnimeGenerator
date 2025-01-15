@@ -1,0 +1,128 @@
+{
+  "Generic Styles": {
+    "Enhance": {
+      "positive": "{prompt}, breathtaking, award-winning, professional, highly detailed",
+      "negative": "ugly, deformed, noisy, blurry, distorted, grainy"
+    },
+    "Anime": {
+      "positive": "{prompt}, anime artwork, anime style, key visual, vibrant, studio anime, highly detailed",
+      "negative": "photo, deformed, black and white, realism, disfigured, low contrast"
+    },
+    "Photorealistic": {
+      "positive": "{prompt}, photorealistic, highly detailed, lifelike, precise, accurate",
+      "negative": "abstract, low detail, unrealistic, inaccurate"
+    },
+    "Digital art": {
+      "positive": "{prompt}, concept art, digital artwork, illustrative, painterly, matte painting, highly detailed",
+      "negative": "photo, photorealistic, realism, ugly"
+    },
+    "Fantasy art": {
+      "positive": "{prompt}, ethereal fantasy concept art, magnificent, celestial, ethereal, painterly, epic, majestic, magical, fantasy art, cover art, dreamy",
+      "negative": "photographic, realistic, realism, 35mm film, dslr, cropped, frame, text, deformed, glitch, noise, noisy, off-center, deformed, cross-eyed, closed eyes, bad anatomy, ugly, disfigured"
+    },
+    "Comic book": {
+      "positive": "{prompt}, comic art style, graphic illustration, comic art, graphic novel art, vibrant, highly detailed",
+      "negative": "photograph, deformed, glitch, noisy, realistic, stock photo"
+    },
+    "Analog film": {
+      "positive": "{prompt}, analog film photo, faded film, desaturated, 35mm photo, grainy, vignette, vintage, Kodachrome, Lomography, stained",
+      "negative": "painting, drawing, illustration, glitch, deformed, mutated, cross-eyed, ugly, disfigured"
+    },
+    "Neonpunk": {
+      "positive": "{prompt}, neonpunk style, cyberpunk, vaporwave, neon, vibes, vibrant, stunningly beautiful, crisp, detailed, sleek, ultramodern",
+      "negative": "painting, drawing, illustration, glitch, deformed, mutated, cross-eyed, ugly, disfigured"
+    }
+  },
+  "Famous Artists": {
+    "Van Gogh": {
+      "positive": "{prompt}, Van Gogh style, Expressive, impasto, swirling brushwork, vibrant",
+      "negative": "realistic, photorealistic, calm, straight lines"
+    },
+    "Picasso": {
+      "positive": "{prompt}, Picasso style, Cubist, geometric, abstract, innovative",
+      "negative": "realistic, detailed, smooth, fluid, single perspective"
+    },
+    "Da Vinci": {
+      "positive": "{prompt}, Da Vinci style, Realistic, sfumato, detailed, chiaroscuro",
+      "negative": "abstract, vibrant colors, bold, loose brushwork"
+    },
+    "Monet": {
+      "positive": "{prompt}, Monet style, Impressionist, light-filled, loose brushwork, en plein air",
+      "negative": "defined, detailed, subdued, studio work"
+    },
+    "Rembrandt": {
+      "positive": "{prompt}, Rembrandt style, dramatic lighting, rich colors, painterly, baroque",
+      "negative": "flat lighting, pale colors, photorealistic, modern"
+    },
+    "Dali": {
+      "positive": "{prompt}, Salvador Dali style, surrealist, dreamlike, melting elements, symbolic",
+      "negative": "realistic, ordinary, literal, photographic"
+    }
+  },
+  "Advanced Styles": {
+    "Hyperrealism": {
+      "positive": "{prompt}, hyperrealistic style, ultra-detailed, lifelike, precision, crisp",
+      "negative": "abstract, low detail, unrealistic, blurry"
+    },
+    "Cyberpunk": {
+      "positive": "{prompt}, cyberpunk style, neon, vibes, vibrant, stunningly beautiful, crisp, detailed, sleek, ultramodern, magenta highlights, dark purple shadows, high contrast, cinematic",
+      "negative": "painting, drawing, illustration, glitch, deformed, mutated, cross-eyed, ugly, disfigured"
+    },
+    "Steampunk": {
+      "positive": "{prompt}, steampunk-inspired, gears, brass, rivets, old-world technology, intricate, highly detailed, Victorian",
+      "negative": "ugly, deformed, noisy, blurry, minimalistic, sleek"
+    },
+    "Minimalist": {
+      "positive": "{prompt}, minimalist design, clean, simple, restrained, elegant",
+      "negative": "busy, complex, flamboyant, disfigured"
+    },
+    "Art Nouveau": {
+      "positive": "{prompt}, art nouveau style, organic, curvilinear, decorative, highly detailed",
+      "negative": "geometric, straight lines, functional, low detail"
+    },
+    "Gothic": {
+      "positive": "{prompt}, gothic style, dark, mysterious, intricate, moody",
+      "negative": "light, cheerful, simple, vibrant"
+    }
+  },
+  "Photography Styles": {
+    "Portrait": {
+      "positive": "{prompt}, portrait style, 85mm lens, dramatic lighting, bokeh, professional, highly detailed",
+      "negative": "blurry, oversaturated, overexposed, low quality, wide-angle distortion"
+    },
+    "Cinematic": {
+      "positive": "{prompt}, cinematic shot, movie still, film grain, dramatic lighting, professional cinematography",
+      "negative": "amateur, flash photography, overexposed, digital noise, webcam"
+    },
+    "Fashion": {
+      "positive": "{prompt}, fashion photography, editorial style, high-end, professional lighting, magazine quality",
+      "negative": "amateur, casual, poorly lit, low quality"
+    },
+    "Street": {
+      "positive": "{prompt}, street photography, candid, urban environment, natural lighting, authentic",
+      "negative": "studio, posed, artificial lighting, fake"
+    },
+    "Landscape": {
+      "positive": "{prompt}, landscape photography, golden hour, dramatic scenery, wide angle, high dynamic range",
+      "negative": "indoor, cramped, flat lighting, low contrast"
+    }
+  },
+  "Artistic Techniques": {
+    "Watercolor": {
+      "positive": "{prompt}, watercolor painting, fluid, soft edges, translucent, artistic",
+      "negative": "sharp, digital, photographic, harsh edges"
+    },
+    "Oil Painting": {
+      "positive": "{prompt}, oil painting technique, textured, rich colors, classical style",
+      "negative": "flat, digital, photographic, smooth"
+    },
+    "Pencil Sketch": {
+      "positive": "{prompt}, pencil drawing, detailed sketching, graphite, artistic",
+      "negative": "colorful, digital, photographic, painted"
+    },
+    "Ink Drawing": {
+      "positive": "{prompt}, ink drawing, bold lines, high contrast, artistic",
+      "negative": "colorful, photographic, painted, blurry"
+    }
+  }
+} 
