@@ -17,10 +17,38 @@ class ImageGenerator:
         pipe.enable_vae_slicing()
         return pipe
     
+    def _split_prompt(self, prompt: str) -> str:
+        """Разделяет длинный промпт на части и комбинирует их"""
+        # Разделяем промпт по запятым
+        parts = [p.strip() for p in prompt.split(',')]
+        
+        # Группируем части в chunks, чтобы не превышать лимит токенов
+        chunks = []
+        current_chunk = []
+        current_length = 0
+        
+        for part in parts:
+            # Примерная оценка количества токенов (может потребоваться корректировка)
+            part_tokens = len(part.split())
+            if current_length + part_tokens > 70:  # Оставляем небольшой запас
+                chunks.append(', '.join(current_chunk))
+                current_chunk = [part]
+                current_length = part_tokens
+            else:
+                current_chunk.append(part)
+                current_length += part_tokens
+        
+        if current_chunk:
+            chunks.append(', '.join(current_chunk))
+        
+        # Возвращаем первый чанк (наиболее важные части промпта)
+        return chunks[0]
+    
     def generate(self, metadata: Dict) -> torch.Tensor:
         width, height = map(int, metadata["resolution"].split(" x "))
         
-        prompt = metadata["prompt"]
+        # Обрабатываем промпт
+        prompt = self._split_prompt(metadata["prompt"])
         if "sdxl_style" in metadata:
             prompt = f"{metadata['sdxl_style']}, {prompt}"
             
@@ -37,4 +65,4 @@ class ImageGenerator:
         ).images[0]
         
         torch.cuda.empty_cache()
-        return image 
+        return image
